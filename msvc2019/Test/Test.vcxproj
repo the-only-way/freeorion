@@ -178,7 +178,9 @@
     <ClCompile Include="..\..\client\ClientApp.cpp" />
     <ClCompile Include="..\..\client\ClientNetworking.cpp" />
     <ClCompile Include="..\..\test\parse\CommonTest.cpp" />
-    <ClCompile Include="..\..\test\parse\main.cpp" />
+    <ClCompile Include="..\..\test\parse\main.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="..\..\test\parse\ParserAppFixture.cpp" />
     <ClCompile Include="..\..\test\parse\TestEnumParser.cpp" />
     <ClCompile Include="..\..\test\parse\TestScriptParser.cpp" />
